@@ -1,0 +1,186 @@
+Q 1.  
+
+#include <iostream>
+using namespace std;
+
+// define the variables of the function
+int exp, base, result;
+
+//define the function
+ int integerPower(int base, int exp){
+	 
+	 //mathematical process
+	 int result= 1;
+	 
+	 while (exp> 0){
+	 	
+	 result= result* base;
+	 exp--;
+	
+	 }
+	 return result;
+	 }
+	 
+	 
+int main ()	{
+
+//enter base and exponent
+cout<< "Enter the exponent (a positive, nonzero integer): "<< endl;
+	 cin>> exp;
+		 
+	 	cout<< "Enter the base (integer): "<< endl;
+	 cin>> base;
+	 
+//output the value	 
+	 cout<< "The value is: "<< integerPower(base, exp) << endl;
+	 
+return 0;
+	 
+}
+
+
+
+
+Q 2. 
+
+#include <iostream>
+using namespace std;
+
+//function to calculate the number of seconds
+int timeInSeconds( int hrs, int mins, int s)
+{
+	return( hrs*3600+ mins* 60+ s);
+}
+
+main() {
+
+int h1,m1,s1,h2,m2,s2,result;
+
+{
+//get time 1	
+cout<< "input hours 1 (Between 1 and 12): ";
+cin>> h1;
+
+cout<< "input minutes 1 (Between 1 and 60): ";
+cin>> m1;
+
+cout<< "input seconds 1 (Between 1 and 60): ";
+cin>> s1;
+
+
+// check the validity of time 1
+// if invalid reenter the values
+for (int i=0; (h1>=12 || h1<0) || (m1>59 || m1<0) || (s1>59 || s1<0); i++)
+    	{
+    		cout << "Invalid time! \nEnter time 1: ";
+    		cin >> h1 >> m1 >> s1;
+	}
+
+
+//get time 2	
+cout<< "input hours 2 (Between 1 and 12): ";
+cin>> h2;
+
+cout<< "input minutes 2 (Between 1 and 60): ";
+cin>> m2;
+
+cout<< "input seconds 2 (Between 1 and 60): ";
+cin>> s2;
+
+// check the validity of time 1
+// if invalid reenter the values
+for (int i=0; (h2>=12 || h2<0) || (m2>59 || m2<0) || (s2>59 || s2<0); i++)
+    	{
+    		cout << "Invalid time! \nEnter time 2: ";
+    		cin >> h2 >> m2 >> s2;
+	}
+
+	int result= timeInSeconds( h1, m1, s1)- timeInSeconds( h2, m2, s2); 
+
+cout<< "Difference between the time: "<<result;
+}
+return 0;
+}
+
+
+
+
+Q 3.
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+		
+int main(){
+		
+//input data 	
+	double x1, y1, x2, y2;
+		double distance;
+	
+	cout<< "Enter x1: ";
+	cin>>x1;
+	
+	cout<< "Enter y1: ";
+	cin>>y1;
+	
+	cout<< "Enter x2: ";
+	cin>>x2;
+	
+	cout<< "Enter y2: ";
+	cin>>y2;
+
+//mathematical process as a function
+		
+	distance= sqrt((pow (x2-x1, 2))+(pow (y2-y1, 2)));
+	
+	cout<< "Distance between the two points: "<< distance;
+	return distance;
+
+return 0;
+}
+
+
+
+
+Q 4.
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+	
+	//function
+	
+		void fibonacci(int n){
+			
+			int n1=0, n2=1;
+			int i, temp;   // i= counter, temp is used to swap
+			
+			if (n== 0)
+			
+			return;
+			cout<< n1<< " " ;      //display 0
+			
+		//loop
+		
+			for (i=1; i<n; i++){
+				
+				cout << n2 << " "; 
+				temp= n1+n2;
+				n1=n2;
+				n2=temp;
+				
+			}
+					
+					}
+	
+int main(){
+	
+	int N;
+	
+	cout<< "Enter a number: ";
+	cin>> N;
+
+	fibonacci(N);
+	return 0;
+	
+}
