@@ -261,7 +261,7 @@ cout<< "Debit balance: " << balance<< endl;
 
 cout<< "Do you need another product " << endl;
 cout<< "If you need, press y" << endl;
-cout<< "If you need, press n " << endl;
+cout<< "If you don't need, press n " << endl;
 cin>> anotherproneeded;
 }
 
